@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///D:/GSBackup/LLC%20Client%20Intake%20%E2%80%94%20Business%20Formation.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLC Client Intake — Business Formation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Index_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1e2e;
+    --navy-mid: #1a2f44;
+    --navy-light: #243b54;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f8f4ee;
+    --cream-dark: #ede8df;
+    --text: #1a1a1a;
+    --text-mid: #4a5568;
+    --text-light: #718096;
+    --border: #d4cfc6;
+    --white: #ffffff;
+    --success: #2d6a4f;
+    --radius: 6px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--navy);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(201,168,76,0.04) 40px,
+      rgba(201,168,76,0.04) 41px
+    );
+  }
+  .header-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  .header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+  .header-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .gold-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1.25rem auto 0;
+    position: relative;
+  }
+
+  /* ── Setup Banner ── */
+  .setup-banner {
+    background: #fff8e8;
+    border: 1px solid #e8c97a;
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem auto;
+    max-width: 780px;
+    font-size: 13px;
+    color: #7a5c0a;
+    line-height: 1.6;
+  }
+  .setup-banner strong { font-weight: 500; }
+  .setup-banner a { color: #c9a84c; }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.25rem 4rem;
+  }
+
+  /* ── Progress ── */
+  .progress-wrap {
+    margin: 2rem 0 1.5rem;
+  }
+  .step-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .step-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    transition: color 0.3s;
+  }
+  .step-label.active { color: var(--gold); }
+  .step-label.done { color: var(--navy); }
+  .progress-track {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--navy), var(--gold));
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+  .step-counter {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 6px;
+    text-align: right;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+  }
+  .card-header {
+    background: var(--navy);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .card-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+  }
+  .card-body { padding: 1.25rem 1.5rem; }
+
+  /* ── Fields ── */
+  .field { margin-bottom: 1.2rem; }
+  .field:last-child { margin-bottom: 0; }
+
+  label.field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 5px;
+  }
+  .field-hint {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .req { color: var(--gold); margin-left: 2px; }
+
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  select,
+  textarea {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 12px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+    background: var(--white);
+  }
+  textarea { resize: vertical; line-height: 1.6; }
+  select { cursor: pointer; }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 540px) { .field-row { grid-template-columns: 1fr; } }
+
+  /* ── Radio / Checkbox pills ── */
+  .pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pill-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    font-size: 13px;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.18s;
+    user-select: none;
+    background: var(--white);
+  }
+  .pill-group input[type=radio],
+  .pill-group input[type=checkbox] {
+    width: 13px;
+    height: 13px;
+    accent-color: var(--gold);
+    flex-shrink: 0;
+  }
+  .pill-group label:has(input:checked) {
+    border-color: var(--gold);
+    background: #fdf8ee;
+    color: var(--text);
+  }
+
+  /* ── Checkbox list ── */
+  .check-list { display: flex; flex-direction: column; gap: 10px; }
+  .check-list label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-mid);
+    cursor: pointer;
+    line-height: 1.5;
+  }
+  .check-list input[type=checkbox] {
+    margin-top: 2px;
+    accent-color: var(--navy);
+    flex-shrink: 0;
+  }
+
+  /* ── File upload ── */
+  .upload-zone {
+    border: 1.5px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    background: var(--cream);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+  }
+  .upload-zone:hover {
+    border-color: var(--gold);
+    background: #fdf8ee;
+  }
+  .upload-zone input[type=file] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  .upload-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .upload-icon svg { width: 18px; height: 18px; }
+  .upload-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+  .upload-hint { font-size: 12px; color: var(--text-light); }
+  .file-list { margin-top: 10px; text-align: left; display: flex; flex-direction: column; gap: 6px; }
+  .file-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: var(--navy);
+    border-radius: var(--radius);
+    font-size: 12px;
+    color: var(--white);
+  }
+  .file-tag span { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .file-remove {
+    cursor: pointer;
+    color: rgba(255,255,255,0.5);
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .file-remove:hover { color: #e87a7a; }
+
+  /* ── Divider ── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--cream-dark);
+    margin: 1.25rem 0;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  /* ── Navigation ── */
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--cream-dark);
+  }
+  .btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-mid);
+  }
+  .btn-ghost:hover { border-color: var(--text-mid); color: var(--text); }
+  .btn-primary {
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    color: var(--white);
+  }
+  .btn-primary:hover { background: var(--navy-mid); }
+  .btn-gold {
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .btn-gold:hover { background: var(--gold-light); }
+
+  /* ── Pages ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── Success screen ── */
+  #success-screen {
+    display: none;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .success-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+  .success-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+  .success-sub {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.7;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* ── Loading spinner ── */
+  .spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Error ── */
+  .error-msg {
+    display: none;
+    background: #fff0f0;
+    border: 1px solid #f0a0a0;
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    font-size: 13px;
+    color: #a02020;
+    margin-top: 1rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    padding: 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="header-eyebrow">Business Formation Services</p>
+  <h1 class="header-title">Client Intake &amp; LLC Registration</h1>
+  <p class="header-sub">Please complete all sections and attach any relevant documents. Your information is used solely to structure and register your business entities.</p>
+  <div class="gold-rule"></div>
+</header>
+
+<div class="container">
+
+  <!-- ══ SETUP BANNER — REMOVE AFTER CONFIGURING ══ -->
+  
+
+  
+  
+
+  
+  <form id="intake-form" action="https://formspree.io/f/mjgpzndp" method="POST" enctype="multipart/form-data">
+
+    <!-- ─── PAGE 1: Client Info ─── -->
+    <div class="page active" id="pg1">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">1</div>
+          <div class="card-title">Personal Information</div>
+        </div>
+        <div class="card-body">
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label">First name <span class="req">*</span></label>
+              <input type="text" name="first_name" required="" placeholder="First">
+            </div>
+            <div class="field">
+              <label class="field-label">Last name <span class="req">*</span></label>
+              <input type="text" name="last_name" required="" placeholder="Last">
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Email address <span class="req">*</span></label>
+            <input type="email" name="client_email" required="" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label class="field-label">Phone number</label>
+            <input type="tel" name="phone" placeholder="(555) 000-0000">
+          </div>
+          <div class="field">
+            <label class="field-label">Current residential address <span class="req">*</span></label>
+            <input type="text" name="address" required="" placeholder="Street address, City, State, ZIP">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">2</div>
+          <div class="card-title">Co-Owners / Partners</div>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <label class="field-label">Will any business have co-owners or partners?</label>
+            <div class="pill-group">
+              <label><input type="radio" name="has_partners" value="Yes"> Yes</label>
+              <label><input type="radio" name="has_partners" value="No — sole owner"> No — sole owner</label>
+              <label><input type="radio" name="has_partners" value="Possibly later"> Possibly later</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">If yes, list co-owners (name, ownership %, address)</label>
+            <p class="field-hint">Leave blank if sole owner</p>
+            <textarea name="co_owners" rows="3" placeholder="e.g. Jane Smith — 40% — 123 Main St, Indianapolis IN 46201"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <div></div>
+        <button type="button" class="btn btn-primary" onclick="goPage(2)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- ─── PAGE 2: Business Ideas ─── -->
+    <div class="page" id="pg2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">3</div>
+          <div class="card-title">Business Ideas &amp; Structure</div>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <label class="field-label">List each business idea you are considering <span class="req">*</span></label>
+            <p class="field-hint">One per line. Include a brief description of each.</p>
+            <textarea name="business_ideas" required="" rows="5" placeholder="1. Online boutique — sell handmade jewelry
+2. Property management — manage 2-3 rental units
+3. Consulting — HR consulting for small businesses"></textarea>
+          </div>
+          <div class="field">
+            <label class="field-label">Which idea is furthest along or most important to you?</label>
+            <input type="text" name="priority_idea" placeholder="Name the most developed idea">
+          </div>
+          <div class="field">
+            <label class="field-label">Are any of these ideas already generating revenue?</label>
+            <div class="pill-group">
+              <label><input type="radio" name="revenue_status" value="Yes, at least one"> Yes, at least one</label>
+              <label><input type="radio" name="revenue_status" value="Not yet — pre-revenue"> Not yet — pre-revenue</label>
+              <label><input type="radio" name="revenue_status" value="Mixed"> Mixed</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Are you currently operating under your personal name or informally?</label>
+            <div class="pill-group">
+              <label><input type="radio" name="informal_op" value="Yes"> Yes</label>
+              <label><input type="radio" name="informal_op" value="No"> No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">4</div>
+          <div class="card-title">Goals &amp; Vision</div>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <label class="field-label">What is your 1-year goal for the business(es)?</label>
+            <textarea name="goal_1yr" rows="3" placeholder="e.g. Launch and reach $5K/month, hire 2 contractors..."></textarea>
+          </div>
+          <div class="field">
+            <label class="field-label">What is your 3–5 year vision?</label>
+            <textarea name="goal_5yr" rows="3" placeholder="e.g. Build a brand portfolio, sell the business, expand to multiple states..."></textarea>
+          </div>
+          <div class="field">
+            <label class="field-label">Do any businesses involve significant liability risk?</label>
+            <p class="field-hint">e.g. physical services, food, real estate, healthcare, client contracts</p>
+            <div class="pill-group">
+              <label><input type="radio" name="liability_risk" value="Yes"> Yes</label>
+              <label><input type="radio" name="liability_risk" value="No"> No</label>
+              <label><input type="radio" name="liability_risk" value="Not sure"> Not sure</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Do you plan to seek outside investors or loans?</label>
+            <div class="pill-group">
+              <label><input type="radio" name="investors" value="Yes"> Yes</label>
+              <label><input type="radio" name="investors" value="No"> No</label>
+              <label><input type="radio" name="investors" value="Maybe later"> Maybe later</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <button type="button" class="btn btn-ghost" onclick="goPage(1)">← Back</button>
+        <button type="button" class="btn btn-primary" onclick="goPage(3)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- ─── PAGE 3: Finances & Operations ─── -->
+    <div class="page" id="pg3">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">5</div>
+          <div class="card-title">Finances &amp; Budget</div>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <label class="field-label">Estimated total startup budget</label>
+            <div class="pill-group">
+              <label><input type="radio" name="budget" value="Under $5K"> Under $5K</label>
+              <label><input type="radio" name="budget" value="$5K–$25K"> $5K–$25K</label>
+              <label><input type="radio" name="budget" value="$25K–$100K"> $25K–$100K</label>
+              <label><input type="radio" name="budget" value="$100K+"> $100K+</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Do you have personal savings set aside for business expenses?</label>
+            <div class="pill-group">
+              <label><input type="radio" name="savings" value="Yes"> Yes</label>
+              <label><input type="radio" name="savings" value="No"> No</label>
+              <label><input type="radio" name="savings" value="Partially"> Partially</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Major anticipated expense categories</label>
+            <div class="pill-group">
+              <label><input type="checkbox" name="expenses" value="Inventory/product"> Inventory / product</label>
+              <label><input type="checkbox" name="expenses" value="Equipment/tools"> Equipment / tools</label>
+              <label><input type="checkbox" name="expenses" value="Marketing/ads"> Marketing / ads</label>
+              <label><input type="checkbox" name="expenses" value="Software/subscriptions"> Software / subscriptions</label>
+              <label><input type="checkbox" name="expenses" value="Contractors/staff"> Contractors / staff</label>
+              <label><input type="checkbox" name="expenses" value="Office/storefront"> Office / storefront</label>
+              <label><input type="checkbox" name="expenses" value="Legal/accounting"> Legal / accounting</label>
+              <label><input type="checkbox" name="expenses" value="Vehicle/travel"> Vehicle / travel</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Current bookkeeping method</label>
+            <div class="pill-group">
+              <label><input type="radio" name="bookkeeping" value="DIY spreadsheets"> DIY spreadsheets</label>
+              <label><input type="radio" name="bookkeeping" value="Software (QuickBooks etc.)"> Software</label>
+              <label><input type="radio" name="bookkeeping" value="Accountant/bookkeeper"> Accountant / bookkeeper</label>
+              <label><input type="radio" name="bookkeeping" value="Not set up yet"> Not set up yet</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Should the holding company pay centralized expenses on behalf of operating LLCs?</label>
+            <div class="pill-group">
+              <label><input type="radio" name="holding_expenses" value="Yes"> Yes</label>
+              <label><input type="radio" name="holding_expenses" value="No"> No</label>
+              <label><input type="radio" name="holding_expenses" value="Let&#39;s discuss"> Let's discuss</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">6</div>
+          <div class="card-title">Operations</div>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <label class="field-label">Will any business have employees within the first year?</label>
+            <div class="pill-group">
+              <label><input type="radio" name="employees" value="Yes"> Yes</label>
+              <label><input type="radio" name="employees" value="Contractors only"> Contractors only</label>
+              <label><input type="radio" name="employees" value="No employees planned"> No employees planned</label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">How involved do you want to be in day-to-day operations?</label>
+            <textarea name="involvement" rows="3" placeholder="e.g. Hands-on for Business A, want to hire a manager for Business B..."></textarea>
+          </div>
+          <div class="field">
+            <label class="field-label">Assets to be held by the holding company (if applicable)</label>
+            <p class="field-hint">e.g. domain names, trademarks, real estate, vehicles, equipment</p>
+            <textarea name="holding_assets" rows="3" placeholder="List any assets here..."></textarea>
+          </div>
+          <div class="field">
+            <label class="field-label">Biggest concern going into this process</label>
+            <textarea name="concerns" rows="3" placeholder="e.g. Keeping costs low, staying compliant, protecting personal assets, minimizing taxes..."></textarea>
+          </div>
+          <div class="field">
+            <label class="field-label">Additional notes or questions</label>
+            <textarea name="additional_notes" rows="4" placeholder="Anything else that would help plan the right structure for you..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <button type="button" class="btn btn-ghost" onclick="goPage(2)">← Back</button>
+        <button type="button" class="btn btn-primary" onclick="goPage(4)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- ─── PAGE 4: Documents ─── -->
+    <div class="page" id="pg4">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">7</div>
+          <div class="card-title">Document Uploads</div>
+        </div>
+        <div class="card-body">
+          <p style="font-size:13px; color:var(--text-light); margin-bottom:1.25rem; line-height:1.7;">
+            Upload any documents you already have available. All fields are optional — you can provide missing documents later.
+            Accepted formats: PDF, JPG, PNG, DOC, DOCX (max 20 MB per file).
+          </p>
+
+          <div class="field">
+            <div class="section-label">Identity &amp; Ownership</div>
+            <div class="field">
+              <label class="field-label">Government-issued ID (all members)</label>
+              <div class="upload-zone" id="zone-id">
+                <input type="file" name="id_documents" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple="" onchange="handleFiles(this, &#39;list-id&#39;)">
+                <div class="upload-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 16v-8m-4 4l4-4 4 4"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>
+                </div>
+                <div class="upload-label">Click to upload or drag &amp; drop</div>
+                <div class="upload-hint">Driver's license, passport, or state ID for each owner</div>
+              </div>
+              <div class="file-list" id="list-id"></div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <div class="field">
+            <div class="section-label">Business Documents</div>
+            <div class="field">
+              <label class="field-label">Existing business documents</label>
+              <div class="upload-zone">
+                <input type="file" name="business_docs" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple="" onchange="handleFiles(this, &#39;list-biz&#39;)">
+                <div class="upload-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                </div>
+                <div class="upload-label">Click to upload or drag &amp; drop</div>
+                <div class="upload-hint">Any existing operating agreements, contracts, EIN letters, licenses, or registrations</div>
+              </div>
+              <div class="file-list" id="list-biz"></div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <div class="field">
+            <div class="section-label">Financial Documents</div>
+            <div class="field">
+              <label class="field-label">Financial records (optional)</label>
+              <div class="upload-zone">
+                <input type="file" name="financial_docs" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xlsx,.csv" multiple="" onchange="handleFiles(this, &#39;list-fin&#39;)">
+                <div class="upload-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 1 0 0 7h5a3.5 3.5 0 1 1 0 7H6"></path></svg>
+                </div>
+                <div class="upload-label">Click to upload or drag &amp; drop</div>
+                <div class="upload-hint">Bank statements, prior tax returns, profit &amp; loss statements</div>
+              </div>
+              <div class="file-list" id="list-fin"></div>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <div class="field">
+            <div class="section-label">Other</div>
+            <div class="field">
+              <label class="field-label">Any other relevant documents</label>
+              <div class="upload-zone">
+                <input type="file" name="other_docs" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xlsx" multiple="" onchange="handleFiles(this, &#39;list-other&#39;)">
+                <div class="upload-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                </div>
+                <div class="upload-label">Click to upload or drag &amp; drop</div>
+                <div class="upload-hint">Lease agreements, insurance policies, notes, or anything else relevant</div>
+              </div>
+              <div class="file-list" id="list-other"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <button type="button" class="btn btn-ghost" onclick="goPage(3)">← Back</button>
+        <button type="button" class="btn btn-primary" onclick="goPage(5)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- ─── PAGE 5: Review & Submit ─── -->
+    <div class="page" id="pg5">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-num">8</div>
+          <div class="card-title">Review &amp; Submit</div>
+        </div>
+        <div class="card-body">
+          <p style="font-size:14px; color:var(--text-mid); line-height:1.7; margin-bottom:1.25rem;">
+            Please review your information before submitting. Once submitted, your intake form and any uploaded documents will be sent directly to your advisor.
+          </p>
+
+          <div id="review-summary" style="background:var(--cream); border-radius:var(--radius); padding:1.25rem; font-size:13px; line-height:1.8; color:var(--text-mid); margin-bottom:1.25rem;">
+            <!-- populated by JS -->
+          </div>
+
+          <div class="field">
+            <label class="field-label">
+              <input type="checkbox" id="confirm-check" style="margin-right:8px; accent-color:var(--navy);">
+              I confirm that the information provided is accurate to the best of my knowledge.
+            </label>
+          </div>
+
+          <!-- Hidden field to label the submission -->
+          <input type="hidden" name="_subject" value="New LLC Client Intake Form Submission">
+          <input type="hidden" name="_next" value="about:blank">
+        </div>
+      </div>
+
+      <div id="error-msg" class="error-msg">There was a problem submitting the form. Please try again or contact your advisor directly.</div>
+
+      <div class="nav-row">
+        <button type="button" class="btn btn-ghost" onclick="goPage(4)">← Back</button>
+        <button type="submit" class="btn btn-gold" id="submit-btn" onclick="return checkSubmit()">
+          <span id="btn-text">Submit intake form</span>
+          <div class="spinner" id="spinner"></div>
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+  <!-- ── SUCCESS ── -->
+  <div id="success-screen">
+    <div class="success-icon">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <h2 class="success-title">Thank you!</h2>
+    <p class="success-sub">Your intake form has been submitted. Your advisor will review your information and reach out shortly to discuss next steps.</p>
+  </div>
+
+</div>
+
+<footer>
+  This form is confidential and intended solely for business formation planning purposes.
+</footer>
+
+<script>
+  const steps = ['sl-1','sl-2','sl-3','sl-4','sl-5'];
+  const pcts = [20, 40, 60, 80, 100];
+
+  function goPage(n) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('pg'+n).classList.add('active');
+    document.getElementById('prog').style.width = pcts[n-1] + '%';
+    document.getElementById('step-counter').textContent = 'Step ' + n + ' of 5';
+    steps.forEach((id, i) => {
+      const el = document.getElementById(id);
+      el.classList.remove('active','done');
+      if (i === n-1) el.classList.add('active');
+      else if (i < n-1) el.classList.add('done');
+    });
+    if (n === 5) buildReview();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function buildReview() {
+    const f = document.getElementById('intake-form');
+    const get = name => {
+      const els = f.querySelectorAll('[name="'+name+'"]');
+      if (!els.length) return '—';
+      if (els[0].type === 'radio') {
+        const checked = f.querySelector('[name="'+name+'"]:checked');
+        return checked ? checked.value : '—';
+      }
+      if (els[0].type === 'checkbox') {
+        const vals = Array.from(f.querySelectorAll('[name="'+name+'"]:checked')).map(e => e.value);
+        return vals.length ? vals.join(', ') : '—';
+      }
+      return els[0].value || '—';
+    };
+
+    const rows = [
+      ['Name', get('first_name') + ' ' + get('last_name')],
+      ['Email', get('client_email')],
+      ['Phone', get('phone')],
+      ['Co-owners?', get('has_partners')],
+      ['Revenue status', get('revenue_status')],
+      ['1-year goal', get('goal_1yr')],
+      ['Budget', get('budget')],
+      ['Employees?', get('employees')],
+      ['Bookkeeping', get('bookkeeping')],
+      ['Biggest concern', get('concerns')],
+    ];
+
+    document.getElementById('review-summary').innerHTML = rows.map(([k,v]) =>
+      `<div style="display:flex; gap:1rem; padding:5px 0; border-bottom:1px solid var(--cream-dark);">
+        <span style="min-width:130px; font-weight:500; color:var(--text);">${k}</span>
+        <span>${v}</span>
+      </div>`
+    ).join('');
+  }
+
+  function handleFiles(input, listId) {
+    const list = document.getElementById(listId);
+    list.innerHTML = '';
+    Array.from(input.files).forEach(f => {
+      const tag = document.createElement('div');
+      tag.className = 'file-tag';
+      tag.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>${f.name}</span><span style="color:rgba(255,255,255,0.4);font-size:11px;">${(f.size/1024).toFixed(0)} KB</span>`;
+      list.appendChild(tag);
+    });
+  }
+
+  function checkSubmit() {
+    if (!document.getElementById('confirm-check').checked) {
+      alert('Please confirm the accuracy of your information before submitting.');
+      return false;
+    }
+    return true;
+  }
+
+  document.getElementById('intake-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    if (!checkSubmit()) return;
+
+    const btn = document.getElementById('submit-btn');
+    const spinner = document.getElementById('spinner');
+    const btnText = document.getElementById('btn-text');
+    const errMsg = document.getElementById('error-msg');
+
+    btn.disabled = true;
+    spinner.style.display = 'block';
+    btnText.textContent = 'Submitting…';
+    errMsg.style.display = 'none';
+
+    try {
+      const data = new FormData(this);
+      const res = await fetch(this.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        document.getElementById('intake-form').style.display = 'none';
+        document.getElementById('success-screen').style.display = 'block';
+        document.querySelector('.progress-wrap').style.display = 'none';
+        document.getElementById('setup-note') && (document.getElementById('setup-note').style.display = 'none');
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      errMsg.style.display = 'block';
+      btn.disabled = false;
+      spinner.style.display = 'none';
+      btnText.textContent = 'Submit intake form';
+    }
+  });
+</script>
+
+
+
+</body></html>
